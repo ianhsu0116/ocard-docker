@@ -6,7 +6,7 @@ WORKDIR /server
 
 # RUN npm install
 COPY package*.json ./
-RUN npm install && mv node_modules /node_modules
+RUN npm install && mv node_modules /node_modules -force
 # RUN npm install apidoc -g
 
 COPY . .
