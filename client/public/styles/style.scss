@@ -1,0 +1,75 @@
+$OcardLightBlue: rgb(51, 151, 207);
+$OcardBlue: rgb(0, 106, 166);
+$OcardButtonBlue: rgb(0, 88, 138);
+$OcardButtonRed: rgb(250, 55, 55);
+$OcardLightButtonBlue: #3397cf;
+$facebookBlue: rgb(66, 95, 156);
+$colorLighGray: rgba(0, 0, 0, 0.35);
+$colorMidGray: rgba(0, 0, 0, 0.6);
+$likesActiveRed: rgb(234, 92, 92);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+// 開啟 floating box 時防止 scroll event 傳導致下層
+.stopScroll {
+  overflow: hidden;
+}
+
+html {
+  overflow: -moz-hidden-unscrollable; /*注意！若只打 hidden，chrome 的其它 hidden 會出問題*/
+  height: 100%;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background: rgb(0, 50, 78);
+  -ms-overflow-style: none;
+  height: 100%;
+  //width: calc(100vw + 18px); /*瀏覽器滾動條的長度大約是 18px*/
+  overflow: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+// 按鍵
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+// 留言愛心
+.likesActive {
+  svg {
+    fill: $likesActiveRed !important;
+  }
+}
+
+// 給sort button用的button active 目前還未用到
+.sortSelector-con-btn-active {
+  color: $OcardLightButtonBlue;
+}
+
+// 手機版sort button用
+.mobile-sortBtn-active {
+  color: rgba(0, 0, 0, 0.8) !important;
+  border-bottom: 3px solid $OcardLightBlue !important;
+}
+
+@import "./header";
+@import "./sidebar";
+@import "./main";
+@import "./login";
+@import "./postArticle";
+@import "./boardSelector";
+@import "./articleDetail";
+@import "./profile";
