@@ -46,9 +46,8 @@ Amazon S3
 ## [1.0.0] 2021-10-25
 
 ### added
-
 - 2022/06/07
-  Dockerize !!!
+  Dockerize
 
 - 2021/10/17
   Useing Amazon S3 to store upload images
@@ -60,11 +59,10 @@ Amazon S3
   Search function
 
 ### changed
-
 - 2021-10-30
   Disabled background body scroll when article modal is showing
 
-### How to start the app
+## How to start the app
 
 - Client
   ```
@@ -79,6 +77,12 @@ Amazon S3
   $ docker build -t ocard-server  .
   $ docker run -p 7777:80 ocard-server 
   ```
+
+## Todos
+- IaC
+- Deployed on ECS
+- Custom domain
+
 ## Conteact
 
 If you got any problem when using Ocard, or had any suggestion about it. Please feel free to contact with me via email.
