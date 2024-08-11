@@ -1,6 +1,7 @@
 import axios from "axios";
-const API_URL = " /api/article";
-const OPEN_API_URL = "http://localhost:7777/api/open-article";
+const BACKEND_API_HOST = process.env.REACT_APP_BACKEND_API_HOST;
+const API_URL = `${BACKEND_API_HOST}/api/article`;
+const OPEN_API_URL = `${BACKEND_API_HOST}/api/open-article`;
 
 class ArticleService {
   // 新增文章

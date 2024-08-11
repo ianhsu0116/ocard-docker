@@ -64,18 +64,39 @@ Amazon S3
 
 ## How to start the app
 
+- Set up .nev file before starting the app
+
 - Client
-  ```
-  $ cd client
-  $ docker build -t ocard-client  .
-  $ docker run -it -p 3000:3000 ocard-client
+  ```bash
+  cd client
+
+  docker buildx build \
+    --platform linux/amd64 \
+    -f Dockerfile \
+    -t ocard-frontend:latest \
+    --load \
+    .
+  
+  env $(grep -v '^#' .env | xargs) docker run -p 3000:3000 --platform linux/amd64 ocard-frontend
   ```
 
 - Server
+  ```bash
+  cd server
+
+  docker buildx build \
+    --platform linux/amd64 \
+    -f Dockerfile \
+    -t ocard-backend:latest \
+    --load \
+    .
+  
+  docker run -p 7777:80 --platform linux/amd64 ocard-backend
   ```
-  $ cd server
-  $ docker build -t ocard-server  .
-  $ docker run -p 7777:80 ocard-server 
+
+- Docker compose
+  ```bash
+  env $(grep -v '^#' .env | xargs) docker compose up --build
   ```
 
 ## Todos

@@ -7,10 +7,12 @@ WORKDIR /server
 # RUN npm install
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm install -force
+# RUN npm install -force
+RUN npm ci
 
 COPY . .
 
 EXPOSE 80
 
-CMD node index.js
+# CMD node index.js
+CMD ["node", "index.js"]    

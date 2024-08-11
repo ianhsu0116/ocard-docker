@@ -1,5 +1,6 @@
 import axios from "axios";
-const API_URL = "http://localhost:7777/api/user";
+const BACKEND_API_HOST = process.env.REACT_APP_BACKEND_API_HOST;
+const API_URL = `${BACKEND_API_HOST}/api/user`;
 
 class AuthService {
   getUserProfile(_id) {
