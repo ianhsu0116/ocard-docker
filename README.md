@@ -11,7 +11,7 @@ https://user-images.githubusercontent.com/82724318/138205206-025142f0-fc7b-490f-
 ## Front-End Fundamental
 
 HTML  
-CSS  
+SCSS  
 JavaScript (ES2015)
 
 ## Front-End Frameworks & Libraries
@@ -46,6 +46,9 @@ Amazon S3
 ## [1.0.0] 2021-10-25
 
 ### added
+- 2024/08/01
+  Deployed on AWS!
+
 - 2022/06/07
   Dockerize
 
